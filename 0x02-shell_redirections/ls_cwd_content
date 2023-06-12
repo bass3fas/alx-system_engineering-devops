@@ -1,5 +1,5 @@
 total 64
-drwxrwxrwx+ 2 root root 4096 Jun 12 09:05 .
+drwxrwxrwx+ 2 root root 4096 Jun 12 09:11 .
 drwxr-xr-x  6 root root  149 Jun 11 23:24 ..
 -rwxrwxrwx  1 root root   32 Jun 11 23:40 0-hello_world
 -rwxr--r--  1 root root   28 Jun 12 00:38 1-confused_smiley
@@ -16,6 +16,6 @@ drwxr-xr-x  6 root root  149 Jun 11 23:24 ..
 -rwxrw-rw-  1 root root    0 Jun 12 09:02 \*\\"Best School
 -rwxrw-rw-  1 root root    0 Jun 12 08:58 \*\\\"Best School"\
 -rwxrw-rw-  1 root root  126 Jun 12 03:18 iacta
--rw-rw-rw-  1 root root    0 Jun 12 09:05 ls_cwd_content
+-rw-rw-rw-  1 root root    0 Jun 12 09:11 ls_cwd_content
 -rwxrw-rw-  1 root root   28 Jun 12 03:01 permission
 -rwxrwxrwx  1 root root   43 Jun 11 23:26 README.md
