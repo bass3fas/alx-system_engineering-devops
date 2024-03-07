@@ -33,21 +33,19 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-# start of parameters for aysuarex.tech
+# Frontend configuration for cheapest-tomato.tech
 frontend cheapest-tomato.tech-http-frontend
-	bind	 *:80
-	http-request set-header X-Forwarded-Proto http
-	default_backend	 cheapest-tomato.tech-backend
+    bind *:80
+    http-request set-header X-Forwarded-Proto http
+    default_backend cheapest-tomato.tech-backend
 
+frontend cheapest-tomato.tech-https-frontend
+    bind *:443 ssl crt /etc/ssl/cheapest-tomato.tech.pem
+    http-request set-header X-Forwarded-Proto https
+    default_backend cheapest-tomato.tech-backend
 
-frontend  cheapest-tomato.tech-https-frontend
-	bind *:443 ssl crt /etc/ssl/aysuarex.tech.pem
-	http-request set-header X-Forwarded-Proto https
-        default_backend cheapest-tomato.tech-backend
-
-
+# Backend configuration for cheapest-tomato.tech
 backend cheapest-tomato.tech-backend
-        balance roundrobin
-        server 441179-web-01 34.202.164.44:80 check
-        server 441179-web-02 100.26.252.28:80 check
-# end of parameters
+    balance roundrobin
+    server 441179-web-01 34.202.164.44:80 check
+    server 441179-web-02 100.26.252.28:80 check
