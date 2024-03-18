@@ -24,7 +24,7 @@ frontend www-http
     default_backend www-backend
 
 frontend www-https
-    bind   0.0.0.0:443 ssl crt /etc/haproxy/certs/www.bdbnb.site.pem
+    bind   0.0.0.0:443 ssl crt /etc/letsencrypt/live/www.cheapest-tomato.tech/fullchain.pem
     reqadd X-Forwarded-Proto:\ https
     acl    letsencrypt-acl path_beg /.well-known/acme-challenge/
     use_backend letsencrypt-backend if letsencrypt-acl
@@ -32,7 +32,7 @@ frontend www-https
 
 backend www-backend
     balance  roundrobin
-    redirect scheme https if !{ ssl_fc}
+    redirect scheme https if !{ ssl_fc }
     server 441179-web-01 34.202.164.44:80 check
     server 441179-web-02 100.26.252.28:80 check
 
