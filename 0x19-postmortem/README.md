@@ -47,3 +47,49 @@ Tasks to Address the Issue:
 Update deployment pipelines to include thorough testing of authentication mechanisms before production deployment.
 Review and revise monitoring and alerting thresholds for quicker detection and response to similar incidents in the future.
 By implementing these measures and ensuring rigorous testing and monitoring practices, we aim to minimize the impact of unexpected issues during future deployments and maintain high availability and reliability for our users.
+
+
+        +-----------------------+
+        |    User Experience    |
+        +-----------------------+
+                    |
+                    v
+        +-----------------------+
+        |   Production Server   |
+        |        (API)          |
+        +-----------|-----------+
+                    |
+                    v
+        +-----------------------+
+        |  Deployment Pipeline  |
+        +-----------|-----------+
+                    |
+                    v
+        +-----------------------+
+        |   Code Deployment     |
+        |   (Authentication)    |
+        +-----------|-----------+
+                    |
+                    v
+        +-----------------------+
+        |       Incident        |
+        |      Investigation    |
+        +-----------|-----------+
+                    |
+                    v
+        +-----------------------+
+        |      Root Cause       |
+        |   Authentication Bug |
+        +-----------|-----------+
+                    |
+                    v
+        +-----------------------+
+        |       Resolution      |
+        | Rollback Authentication|
+        +-----------|-----------+
+                    |
+                    v
+        +-----------------------+
+        |     Post-Incident     |
+        |      Actions Taken    |
+        +-----------------------+
